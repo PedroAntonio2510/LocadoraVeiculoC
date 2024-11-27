@@ -1,4 +1,4 @@
-/*Melhorias Implementadas:
+/*
 Alunos: 
 Pedro Antonio Pereira de Araujo
 Saulo Contreras de Assis
@@ -13,16 +13,16 @@ Menu com formato mais claro: Melhor apresentação do menu, usando uma interface
 
 Validação de entradas: Adição de validação de escolha no menu e confirmação para sair.
 
-Remoção de limite fixo de 20 placas: Aumentado para até 100 placas(PORQUE SIM :]).
-
 Mensagem final personalizada: Exibe o número de placas registradas ao encerrar o programa.
 Limpeza do buffer (fflush(stdin)): Previne problemas ao processar entradas consecutivas
 
 Abstração: on
 O QUE:
-    Escrever um algoritmo em C para entrada de dados de uma placa de carro com 7 digitos sendo 3 letras, 4 números e listas as placas registradas.
+    Escrever um algoritmo em C para entrada de dados de uma placa de carro com 7 digitos sendo 3 letras, 
+    4 números e listas as placas registradas.
 COMO?:
-    Por meio da entrada de dados do usuário, o algoritmo verifica e registra a placa digitada,e após isso ele pergunta ao usúario se quer digitar uma nova placa ou visualizar as placas registradas.
+    Por meio da entrada de dados do usuário, o algoritmo verifica e registra a placa digitada, 
+    e após isso ele pergunta ao usúario se quer digitar uma nova placa ou visualizar as placas registradas.
 ALGORITMO:
 */
 #include <stdio.h>  // Biblioteca padrão de entrada e saída
