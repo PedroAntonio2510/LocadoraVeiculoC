@@ -6,19 +6,6 @@ Arthur Gomes de Albuquerque Labbê
 João Pedro Oliveira Anhaia
 Samuel Colaço Lira Carvalho
 
-
-Função mostrarPlacas: Modularização do código para exibir placas, tornando-o mais organizado.
-
-Menu com formato mais claro: Melhor apresentação do menu, usando uma interface mais amigável.
-
-Validação de entradas: Adição de validação de escolha no menu e confirmação para sair.
-
-Remoção de limite fixo de 20 placas: Aumentado para até 100 placas(PORQUE SIM :]).
-
-Mensagem final personalizada: Exibe o número de placas registradas ao encerrar o programa.
-Limpeza do buffer (fflush(stdin)): Previne problemas ao processar entradas consecutivas
-
-Abstração: on
 O QUE:
     Escrever um algoritmo em C para entrada de dados de uma placa de carro com 7 digitos sendo 3 letras, 4 números e listas as placas registradas.
 COMO?:
@@ -102,8 +89,8 @@ int main() {
         }
 
         // Pergunta ao usuário se deseja continuar no menu principal
-        printf("\nDeseja voltar ao menu principal? (1 = Sim, 2 = Não): "); // Pergunta ao usuário se deseja continuar
-        fflush(stdin);
+        printf("\nDeseja voltar ao menu principal? (1 = Sim, 2 = Não/Encerrar o programa): "); // Pergunta ao usuário se deseja continuar
+        fflush(stdin); // Limpa o buffer do teclado
         scanf("%d", &continuar);
 
         // Se o usuário digitar 2, o loop terminará
