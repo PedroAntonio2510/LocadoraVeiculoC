@@ -64,42 +64,45 @@ int main() {
         fflush(stdin); 
         scanf("%d", &escolha);
 
-        if (escolha == 1) {
-            if (total_placas >= 100) {
+        if (escolha == 1) { //Caso o usuário escolha registrar uma nova placa             
+            if (total_placas >= 100) { // Verifica se o limite de placas foi atingido
                 printf("Limite de placas registradas atingido.\n");
-                break;
+                break; // Quebra o loop se a condição for verdadeira
             }
 
             printf("Digite as três letras da placa do carro: ");
             scanf("%s", letras);
 
+            // Verifica se a entrada contém exatamente 3 caracteres e se são letras maiúsculas
             if (strlen(letras) != 3 || !(letras[0] >= 'A' && letras[0] <= 'Z') || 
                 !(letras[1] >= 'A' && letras[1] <= 'Z') || !(letras[2] >= 'A' && letras[2] <= 'Z')) {
                 printf("As letras devem conter exatamente 3 caracteres e ser letras maiúsculas.\n");
-                continue;
+                continue; // Retorna ao início do loop para nova entrada
             }
 
             printf("Digite os números da placa do carro (até 4 dígitos): ");
             scanf("%d", &numeros);
 
+            // Verifica se foi digitado até 4 numeros
             if (numeros < 0 || numeros > 9999) {
                 printf("Os números devem ter até 4 dígitos.\n");
                 continue;
             }
 
+             // Formata as letras e números como uma única string de placa
             sprintf(placas[total_placas], "%s%04d", letras, numeros);
-            printf("Placa registrada: %s\n", placas[total_placas]);
-            total_placas++;
+            printf("Placa registrada: %s\n", placas[total_placas]); //Exibi as placas registradas
+            total_placas++; // Incrementa o contador de placas registradas
 
-        } else if (escolha == 2) {
-            mostrarPlacas(placas, total_placas);
+        } else if (escolha == 2) { 
+            mostrarPlacas(placas, total_placas); // Chama a função auxiliar para exibir as placas
         } else {
-            printf("Opção inválida. Por favor, escolha 1 ou 2.\n");
+            printf("Opção inválida. Por favor, escolha 1 ou 2.\n"); // Caso o usuário insira uma opção inválida
             continue;
         }
 
         // Pergunta ao usuário se deseja continuar no menu principal
-        printf("\nDeseja voltar ao menu principal? (1 = Sim, 2 = Não): ");
+        printf("\nDeseja voltar ao menu principal? (1 = Sim, 2 = Não): "); // Pergunta ao usuário se deseja continuar
         fflush(stdin);
         scanf("%d", &continuar);
 
